@@ -30,7 +30,7 @@ Package should automatically register its service provider in your application, 
 'providers' => ServiceProvider::defaultProviders()
     ->merge([
         // Package Service Providers
-        \Manchenkov\Laravel\Repositories\ServiceProvider::class,
+        \Manchenkoff\Laravel\Repositories\ServiceProvider::class,
 
         // Application Service Providers
         // ...
