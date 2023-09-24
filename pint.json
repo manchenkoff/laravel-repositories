@@ -1,0 +1,14 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "final_class": true,
+        "phpdoc_separation": true,
+        "declare_strict_types": true,
+        "no_superfluous_phpdoc_tags": false,
+        "not_operator_with_successor_space": false,
+        "phpdoc_var_annotation_correct_order": true,
+        "concat_space": {
+            "spacing": "one"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+/.fleet
+/.idea
+/.vscode
+
+/vendor
+composer.lock
+
+*.cache
+.*.cache
+
+/tests/cache
+
+.DS_Store

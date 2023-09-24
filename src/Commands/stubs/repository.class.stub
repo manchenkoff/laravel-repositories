@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Manchenkoff\Laravel\Repositories\Repository;
+use {{ namespacedContract }};
+use {{ namespacedModel }};
+
+/**
+ * @template TKey of array-key
+ * @template TModel of {{ model }}
+ *
+ * @implements {{ contract }}<TKey, TModel>
+ */
+final class {{ class }} extends Repository implements {{ contract }}
+{
+    protected static string $modelClass = {{ model }}::class;
+}

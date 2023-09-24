@@ -1,0 +1,10 @@
+providers:
+  - Manchenkoff\Laravel\Repositories\ServiceProvider
+
+workbench:
+  start: '/'
+  install: true
+  welcome: true
+  build: []
+  assets: []
+  sync: []

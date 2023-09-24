@@ -1,0 +1,19 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Manchenkoff\Laravel\Repositories\Contracts\RepositoryInterface;
+use {{ namespacedModel }};
+
+/**
+ * @template TKey of array-key
+ * @template TModel of {{ model }}
+ *
+ * @extends RepositoryInterface<TKey, TModel>
+ */
+interface {{ class }} extends RepositoryInterface
+{
+    //
+}
