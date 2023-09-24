@@ -108,6 +108,12 @@ Here is a list of available methods with a quick description:
 | `delete(Model $entity): Model`              | deletes existing entity                                 |
 | `deleteMany(array $ids): void`              | deletes many entities by ids                            |
 
+Also you might want to adjust class template for your needs. You can do it by publishing package views:
+
+```bash
+php artisan vendor:publish --provider="Manchenkov\Laravel\Repositories\ServiceProvider"
+```
+
 ## Development
 
 This package is completely open-source, so any contributions are welcome!
