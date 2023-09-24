@@ -111,7 +111,7 @@ Here is a list of available methods with a quick description:
 Also you might want to adjust class template for your needs. You can do it by publishing package views:
 
 ```bash
-php artisan vendor:publish --provider="Manchenkov\Laravel\Repositories\ServiceProvider" --tag="stubs"
+php artisan vendor:publish --provider="Manchenkoff\Laravel\Repositories\ServiceProvider"
 ```
 
 ## Development

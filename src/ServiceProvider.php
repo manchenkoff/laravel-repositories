@@ -16,7 +16,7 @@ final class ServiceProvider extends BaseServiceProvider
             __DIR__ . '/Commands/stubs' => base_path('stubs'),
         ];
 
-        $this->publishes($stubFiles, 'stubs');
+        $this->publishes($stubFiles);
 
         if ($this->app->runningInConsole()) {
             $commands = [
