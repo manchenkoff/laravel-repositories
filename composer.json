@@ -55,7 +55,6 @@
         "illuminate/contracts": "^10.0"
     },
     "require-dev": {
-        "icanhazstring/composer-unused": "^0.8.10",
         "laravel/pint": "^1.13",
         "phpunit/phpunit": "^10",
         "phpstan/phpstan": "^1.10",
