@@ -13,7 +13,7 @@ final class ServiceProvider extends BaseServiceProvider
     public function boot(): void
     {
         $stubFiles = [
-            __DIR__ . '/Commands/stubs' => app_path('stubs'),
+            __DIR__ . '/Commands/stubs' => base_path('stubs'),
         ];
 
         $this->publishes($stubFiles);
