@@ -146,7 +146,7 @@ final class RepositoryClassMakeCommand extends GeneratorCommand
     private function createInterface(): void
     {
         $this->call('make:repository:contract', [
-            'name' => $this->getNameInput(),
+            'name' => $this->getNameInput() . 'Interface',
             'model' => $this->argument('model'),
         ]);
     }

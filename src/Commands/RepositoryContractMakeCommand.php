@@ -20,8 +20,8 @@ final class RepositoryContractMakeCommand extends GeneratorCommand
 
     public function handle(): ?bool
     {
-        if (!str_ends_with($this->getNameInput(), 'Repository')) {
-            $this->error('The repository name must end with "Repository" suffix!');
+        if (!str_ends_with($this->getNameInput(), 'Interface')) {
+            $this->error('The repository contract name must end with "Interface" suffix!');
 
             return false;
         }
@@ -47,10 +47,6 @@ final class RepositoryContractMakeCommand extends GeneratorCommand
 
     protected function buildClass($name): string
     {
-        if (!str_ends_with($name, 'Interface')) {
-            $name .= 'Interface';
-        }
-
         $replace = [];
         $replace = $this->buildModelReplacements($replace);
 
