@@ -1,9 +1,9 @@
 # Laravel Repositories
 
-[![Latest Stable Version](http://poser.pugx.org/manchenkoff/laravel-repositories/v)](https://packagist.org/packages/manchenkoff/laravel-repositories)
-[![Total Downloads](http://poser.pugx.org/manchenkoff/laravel-repositories/downloads)](https://packagist.org/packages/manchenkoff/laravel-repositories)
-[![License](http://poser.pugx.org/manchenkoff/laravel-repositories/license)](https://packagist.org/packages/manchenkoff/laravel-repositories)
-[![PHP Version Require](http://poser.pugx.org/manchenkoff/laravel-repositories/require/php)](https://packagist.org/packages/manchenkoff/laravel-repositories)
+![Packagist Version](https://img.shields.io/packagist/v/manchenkoff/laravel-repositories)
+![Packagist Downloads](https://img.shields.io/packagist/dt/manchenkoff/laravel-repositories)
+![Packagist License](https://img.shields.io/packagist/l/manchenkoff/laravel-repositories)
+![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/manchenkoff/laravel-repositories/php)
 
 Package provides a basic implementation of Repository pattern with `artisan` command to generate classes.
 
