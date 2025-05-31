@@ -17,7 +17,6 @@
     "scripts": {
         "fmt": "vendor/bin/pint",
         "test": "vendor/bin/testbench package:test",
-        "insights": "vendor/bin/phpinsights",
         "lint": "vendor/bin/phpstan analyse --memory-limit=256M",
         "rector": "vendor/bin/rector process src --dry-run",
         "rector:fix": "vendor/bin/rector process src",
@@ -49,20 +48,20 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^8.2",
-        "illuminate/console": "^11.0",
-        "illuminate/support": "^11.0",
-        "illuminate/database": "^11.0",
-        "illuminate/contracts": "^11.0"
+        "illuminate/console": ">=11.0",
+        "illuminate/support": ">=11.0",
+        "illuminate/database": ">=11.0",
+        "illuminate/contracts": ">=11.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.14",
-        "phpunit/phpunit": "^10",
-        "phpstan/phpstan": "^1.10",
-        "nunomaduro/larastan": "^2.9",
-        "orchestra/testbench": "^9.0",
-        "rector/rector": "^0.19",
-        "driftingly/rector-laravel": "^0.26.0",
-        "nunomaduro/collision": "^8.1"
+        "laravel/pint": "^v1.22",
+        "phpunit/phpunit": "^12.1",
+        "phpstan/phpstan": "^2.1",
+        "larastan/larastan": "^v3.4",
+        "orchestra/testbench": "^v10.3",
+        "rector/rector": "^2.0",
+        "driftingly/rector-laravel": "^2.0",
+        "nunomaduro/collision": "^v8.8"
     },
     "config": {
         "allow-plugins": {

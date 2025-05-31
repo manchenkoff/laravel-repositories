@@ -19,7 +19,7 @@ use Throwable;
  * Basic abstract repository class with default implementation of interface methods.
  *
  * @template TKey of array-key
- * @template TModel of \Illuminate\Database\Eloquent\Model
+ * @template TModel of Model
  *
  * @implements RepositoryInterface<TKey, TModel>
  */
@@ -32,7 +32,7 @@ abstract class Repository implements RepositoryInterface
      */
     protected static string $modelClass;
 
-    public function paginated(int $perPage = 15, array $columns = ['*'], string $pageName = 'page', int $page = null): LengthAwarePaginator
+    public function paginated(int $perPage = 15, array $columns = ['*'], string $pageName = 'page', ?int $page = null): LengthAwarePaginator
     {
         return $this->query()->paginate($perPage, $columns, $pageName, $page);
     }
@@ -109,6 +109,9 @@ abstract class Repository implements RepositoryInterface
         return $entity;
     }
 
+    /**
+     * @throws Throwable
+     */
     public function deleteMany(array $ids): void
     {
         DB::beginTransaction();
@@ -131,10 +134,11 @@ abstract class Repository implements RepositoryInterface
     /**
      * Initial query builder used in repository methods.
      *
-     * @return Builder
+     * @return Builder<TModel>
      */
     protected function query(): Builder
     {
+        /** @var Builder<TModel> */
         return static::$modelClass::query();
     }
 }

@@ -13,6 +13,4 @@ use Workbench\App\Models\User;
  *
  * @extends RepositoryInterface<TKey, TModel>
  */
-interface UserRepositoryInterface extends RepositoryInterface
-{
-}
+interface UserRepositoryInterface extends RepositoryInterface {}

@@ -26,11 +26,14 @@ final class BaseRepositoryTests extends TestCase
 
     protected string $seeder = UserSeeder::class;
 
+    /**
+     * @var UserRepositoryInterface<array-key, User>
+     */
     private UserRepositoryInterface $repository;
 
     protected function setUp(): void
     {
-        $this->repository = new UserRepository();
+        $this->repository = new UserRepository;
 
         parent::setUp();
     }

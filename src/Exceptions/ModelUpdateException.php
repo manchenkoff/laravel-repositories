@@ -6,6 +6,4 @@ namespace Manchenkoff\Laravel\Repositories\Exceptions;
 
 use RuntimeException;
 
-final class ModelUpdateException extends RuntimeException
-{
-}
+final class ModelUpdateException extends RuntimeException {}
