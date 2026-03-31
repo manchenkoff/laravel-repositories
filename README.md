@@ -119,6 +119,29 @@ Also you might want to adjust class template for your needs. You can do it by pu
 php artisan vendor:publish --provider="Manchenkoff\Laravel\Repositories\ServiceProvider"
 ```
 
+## Configuration
+
+By default, repositories are created in `app/Repositories` and interfaces in `app/Contracts/Repositories`. You can customize these paths by publishing and modifying the config file:
+
+```bash
+php artisan vendor:publish --provider="Manchenkoff\Laravel\Repositories\ServiceProvider"
+```
+
+Then edit `config/repositories.php`:
+
+```php
+return [
+    'paths' => [
+        'repositories' => 'Domain/Users/Repositories',
+        'interfaces' => 'Domain/Users/Contracts',
+    ],
+];
+```
+
+Now running `php artisan make:repository PostRepository Post` will create:
+- `app/Domain/Users/Repositories/PostRepository.php`
+- `app/Domain/Users/Contracts/PostRepositoryInterface.php`
+
 ## Development
 
 This package is completely open-source, so any contributions are welcome!
