@@ -12,11 +12,12 @@ final class ServiceProvider extends BaseServiceProvider
 {
     public function boot(): void
     {
-        $stubFiles = [
-            __DIR__ . '/Commands/stubs' => base_path('stubs'),
-        ];
+        $this->mergeConfigFrom(__DIR__ . '/../config/repositories.php', 'repositories');
 
-        $this->publishes($stubFiles);
+        $this->publishes([
+            __DIR__ . '/../config/repositories.php' => config_path('repositories.php'),
+            __DIR__ . '/Commands/stubs' => base_path('stubs'),
+        ]);
 
         if ($this->app->runningInConsole()) {
             $commands = [

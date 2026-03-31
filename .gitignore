@@ -4,6 +4,7 @@
 
 /vendor
 composer.lock
+.phpactor.json
 
 *.cache
 .*.cache

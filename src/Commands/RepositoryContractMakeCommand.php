@@ -42,7 +42,7 @@ final class RepositoryContractMakeCommand extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace): string
     {
-        return $rootNamespace . '\Contracts\Repositories';
+        return $rootNamespace . '\\' . $this->getInterfacePath();
     }
 
     protected function buildClass($name): string
@@ -57,9 +57,6 @@ final class RepositoryContractMakeCommand extends GeneratorCommand
         );
     }
 
-    /**
-     * @return array<array-key, array<string, string>>
-     */
     protected function getArguments(): array
     {
         $parent = parent::getArguments();
@@ -106,5 +103,12 @@ final class RepositoryContractMakeCommand extends GeneratorCommand
         }
 
         return $this->qualifyModel($model);
+    }
+
+    private function getInterfacePath(): string
+    {
+        $path = config('repositories.paths.interfaces');
+
+        return is_string($path) ? $path : 'Contracts/Repositories';
     }
 }
